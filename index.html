@@ -9,7 +9,6 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <!-- Favicon -->
 <link rel="shortcut icon" href="img/favicon.png">
 
@@ -27,6 +26,16 @@
 <link rel="alternate stylesheet" href="css/theme-mariner.css" title="theme-mariner">
 <link rel="alternate stylesheet" href="css/theme-medium-purple.css" title="theme-medium-purple">
 <link rel="alternate stylesheet" href="css/theme-lavender-magenta.css" title="theme-lavender-magenta">
+
+<!-- panorama -->
+<link rel="stylesheet" href="https://cdn.pannellum.org/2.3/pannellum.css"/>
+<script type="text/javascript" src="https://cdn.pannellum.org/2.3/pannellum.js"></script>
+<style>
+	#panorama {
+	    width: 100%;
+	    height: 500px;
+	}
+</style>
 
 </head>
 <body>
@@ -157,6 +166,9 @@
 
 </header>
 <!-- /Header -->
+
+<!-- panorama -->
+<div id="panorama"></div>
 
 <!-- Slider -->
 <div class="slider owl-carousel owl-theme">
@@ -1069,6 +1081,13 @@
 <link rel="stylesheet" type="text/css" href="demo/styleswitcher.css" property="">
 <script src="demo/styleswitcher.js"></script>
 <!-- /Styleswitcher -->
-
+<script>
+	pannellum.viewer('panorama', {
+	    "type": "equirectangular",
+	    "panorama": "https://pannellum.org/images/alma.jpg"
+	});
+</script>
 </body>
 </html>
+
+
