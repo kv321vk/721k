@@ -42,7 +42,7 @@
 
 <!-- Preloader -->
 <div id="preloader">
-<div class="loader"></div>
+	<div class="loader"></div>
 </div>
 <!-- /Preloader -->
 
@@ -168,13 +168,15 @@
 <!-- /Header -->
 
 <!-- panorama -->
-<div id="panorama"></div>
+<article>
+	<div id="panorama"></div>
+</article>
 
 <!-- Slider -->
 <div class="slider owl-carousel owl-theme">
 
 <!-- Slide -->
-<div class="item mask" style="background: url(images/home.jpg) no-repeat center top / cover;" data-stellar-background-ratio="0.4">
+<!-- <div class="item mask" style="background: url(images/home.jpg) no-repeat center top / cover;" data-stellar-background-ratio="0.4">
 
 	<div class="container height-100p">
 		<div class="row height-100p">
@@ -199,11 +201,11 @@
 		</div>
 	</div>
 
-</div>
+</div> -->
 <!-- /Slide -->
 
 <!-- Slide -->
-<div class="item mask" style="background: url(images/home-02.jpg) no-repeat center top / cover;" data-stellar-background-ratio="0.4">
+<!-- <div class="item mask" style="background: url(images/home-02.jpg) no-repeat center top / cover;" data-stellar-background-ratio="0.4">
 
 	<div class="container height-100p">
 		<div class="row height-100p">
@@ -228,7 +230,7 @@
 		</div>
 	</div>
 
-</div>
+</div> -->
 <!-- /Slide -->
 
 </div>
@@ -1084,7 +1086,11 @@
 <script>
 	pannellum.viewer('panorama', {
 	    "type": "equirectangular",
-	    "panorama": "https://pannellum.org/images/alma.jpg"
+	    "panorama": "https://pannellum.org/images/alma-correlator-facility.jpg",
+    	"title": "一个未知的实验室",
+    	"author": "kael",
+	    "autoLoad": true,
+	    "autoRotate": -2
 	});
 </script>
 </body>
