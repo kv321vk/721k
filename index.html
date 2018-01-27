@@ -30,6 +30,7 @@
 <!-- panorama -->
 <link rel="stylesheet" href="https://cdn.pannellum.org/2.3/pannellum.css"/>
 <script type="text/javascript" src="https://cdn.pannellum.org/2.3/pannellum.js"></script>
+<script type="text/javascript" src="js/popwin.js"></script>
 <style>
 	#panorama {
 	    width: 100%;
@@ -258,8 +259,8 @@
 
 			<!-- Feature Block -->
 			<div class="col-sm-4 feature fadeIn wow" data-wow-duration="1.3s">
-				<span class="icon_link_alt icon"></span>
-				<div class="h3 title">Clean Design</div>
+				<span class="icon_link_alt icon" id="testbttn"></span>
+				<div class="h3 title">Cleans Design</div>
 				<p class="description">
 					It is a long established fact that a reader will be distracted by the readable content of a page
 					when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less.
@@ -1087,10 +1088,16 @@
 	pannellum.viewer('panorama', {
 	    "type": "equirectangular",
 	    "panorama": "https://pannellum.org/images/alma-correlator-facility.jpg",
+	    // "panorama": "/Desktop/721k/img/WechatIMG188.jpeg",
     	"title": "一个未知的实验室",
     	"author": "kael",
 	    "autoLoad": true,
 	    "autoRotate": -2
+	});
+	$(document).ready(function() {
+    $("#testbttn").on('click' , function(){
+			popWin.showWin($(window).width()-50,$(window).height()-50,"通用的iframe弹层插件","http://720yun.com/t/34f239f6a1w?pano_id=1366237");
+		});
 	});
 </script>
 </body>
