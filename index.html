@@ -32,9 +32,17 @@
 <script type="text/javascript" src="https://cdn.pannellum.org/2.3/pannellum.js"></script>
 <script type="text/javascript" src="js/popwin.js"></script>
 <style>
-	#panorama {
-    width: 100%;
-    height: 450px;
+	@media screen and (min-height: 400px) {
+	  #panorama {
+	    width: 100%;
+	    height: 450px;
+		}
+	}
+	@media screen and (max-height: 400px) {
+	  #panorama {
+	    width: 100%;
+	    height: 300px;
+		}
 	}
 </style>
 
@@ -169,9 +177,15 @@
 <!-- /Header -->
 
 <!-- panorama -->
+
 <article>
-	<div id="panorama"></div>
+	<!-- <div id="panorama"></div> -->
 </article>
+
+<!-- <iframe id="panorama" allowfullscreen style="border-style:none;" src="https://cdn.pannellum.org/2.4/pannellum.htm?config=https://pannellum.org/configs/multiresolution.json"></iframe> -->
+
+
+<iframe id="panorama" allowfullscreen style="border-style:none;" src="http://720yun.com/t/34f239f6a1w?pano_id=1366237"></iframe>
 
 <!-- Slider -->
 <div class="slider owl-carousel owl-theme">
@@ -1085,15 +1099,31 @@
 <script src="demo/styleswitcher.js"></script>
 <!-- /Styleswitcher -->
 <script>
-	pannellum.viewer('panorama', {
-	    "type": "equirectangular",
-	    "panorama": "https://pannellum.org/images/alma-correlator-facility.jpg",
-	    // "panorama": "/Desktop/721k/img/WechatIMG188.jpeg",
-    	"title": "一个未知的实验室",
-    	"author": "kael",
-	    "autoLoad": true,
-	    "autoRotate": -2
-	});
+	// pannellum.viewer('panorama', {
+	//     "type": "equirectangular",
+	//     // "panorama": "https://pannellum.org/images/alma-correlator-facility.jpg",
+	//     "panorama": "https://pannellum.org/images/jfk.jpg",
+ //    	"title": "一个未知的实验室",
+ //    	"author": "kael",
+	//     "autoLoad": true,
+	//     "autoRotate": -2
+	// });
+	// pannellum.viewer('panorama', {
+ //    "type": "multires",
+ //    "title": "一个未知的实验室",
+ //  	"author": "kael",
+ //    "autoLoad": true,
+ //    "autoRotate": -2,
+ //    "multiRes": {
+ //      "basePath": "/images/multires/library",
+ //      "path": "/%l/%s%y_%x",
+ //      "fallbackPath": "/fallback/%s",
+ //      "extension": "jpg",
+ //      "tileResolution": 512,
+ //      "maxLevel": 6,
+ //      "cubeResolution": 8432
+ //    }
+	// });
 	$(document).ready(function() {
     $("#testbttn").on('click' , function(){
 			popWin.showWin($(window).width()-50,$(window).height()-50,"通用的iframe弹层插件","http://720yun.com/t/34f239f6a1w?pano_id=1366237");
