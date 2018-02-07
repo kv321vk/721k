@@ -113,6 +113,9 @@ body {
   font-family: 'Raleway', sans-serif;
   background: #fff;
 }
+.pointer {
+  cursor: pointer;
+}
 .relative {
   position: relative !important;
 }
