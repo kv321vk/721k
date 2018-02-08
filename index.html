@@ -38,16 +38,83 @@
 	    height: 450px;
 		}
 	}
+	@media screen and (max-width: 500px) {
+		.mobilenosee {
+			display: none !important;
+		}
+	}
+	@media screen and (min-width: 500px) {
+		.mobileCansee {
+			display: none !important;
+		}
+	}
 	@media screen and (max-height: 400px) {
 	  #panorama {
 	    width: 100%;
 	    height: 300px;
 		}
 	}
+	.hide_box{z-index:999;filter:alpha(opacity=50);background:#666;opacity: 0.5;-moz-opacity: 0.5;left:0;top:0;height:100%;width:100%;position:fixed;display:none;}
+	.shang_box{width:540px;height:490px;padding:10px;background-color:#fff;border-radius:10px;position:fixed;z-index:1000;left:50%;top:50%;margin-left:-280px;margin-top:-280px;border:1px dotted #dedede;display:none;}
+	.shang_box img{border:none;border-width:0;}
+	.shang_close{float:right;display:inline-block;}
+	.shang_logo{display:block;text-align:center;margin:20px auto;}
+	.shang_payimg {
+    display: block;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    margin-top: 66px;
+    margin-bottom: 72px;
+    margin-left: 183px;
+	}
+	.pay_explain{text-align:center;margin:10px auto;font-size:14px;color:#545454;}
+	.shang_info{clear:both;}
+	.shang_info p,.shang_info a{color:#aaa;text-align:center;font-size:12px;text-decoration:none;line-height:2em;}
+	.shang_tit {
+    text-align: center;
+    margin-top: 36px;
+    margin-left: 25px;
+    font-size: 18px;
+	}
+	.shang_box1{width:540px;height:490px;padding:10px;background-color:#fff;border-radius:10px;position:fixed;z-index:1000;left:50%;top:50%;margin-left:-280px;margin-top:-280px;border:1px dotted #dedede;display:none;}
+	.shang_box1 img{border:none;border-width:0;}
 </style>
 
 </head>
 <body>
+
+<!-- 二维码弹窗 wechat-->
+<div class="hide_box"></div>
+<div class="shang_box">
+    <p class="shang_close fa fa-fw fa-close" style="font-size: 20px;color: #aaa; cursor: pointer;" href="" onclick="dashangToggle()"></p>
+    <div class="shang_tit">
+        <p>感谢您的信任，我们会尽快与您沟通</p>
+    </div>
+    <img class="shang_payimg" src="images/wechaterweima.jpg" alt="扫码支持" title="扫一扫" />
+    <div class="pay_explain">请扫码添加我们客服的微信</div>
+    <div class="shang_info">
+        <p>请您打开微信扫一扫添加</p>
+    </div>
+</div>
+<!-- 二维码弹窗 -->
+
+<!-- 二维码弹窗 qq-->
+<div class="hide_box"></div>
+<div class="shang_box1">
+    <p class="shang_close fa fa-fw fa-close" style="font-size: 20px;color: #aaa; cursor: pointer;" href="" onclick="dashangToggle1()"></p>
+    <div class="shang_tit">
+        <p>感谢您的信任，我们会尽快与您沟通</p>
+    </div>
+    <img class="shang_payimg" src="images/wechaterweima.jpg" alt="扫码支持" title="扫一扫" />
+    <div class="pay_explain">请扫码添加我们客服的QQ</div>
+    <div class="shang_info">
+        <p>请您打开手机版QQ扫一扫添加</p>
+    </div>
+</div>
+
+<!-- 二维码弹窗 -->
+
 
 <!-- Preloader -->
 <div id="preloader">
@@ -77,11 +144,8 @@
 				<!-- Social -->
 				<div class="col-md-5">
 					<ul class="social">
-						<li><a href="#" class="fa fa-fw fa-facebook"></a></li>
-						<li><a href="#" class="fa fa-fw fa-twitter"></a></li>
-						<li><a href="#" class="fa fa-fw fa-google-plus"></a></li>
-						<li><a href="#" class="fa fa-fw fa-dribbble"></a></li>
-						<li><a href="#" class="fa fa-fw fa-pinterest"></a></li>
+						<li><a href="#" class="fa fa-fw fa-wechat" onclick="dashangToggle()"></a></li>
+						<li><a href="#" class="fa fa-fw fa-qq" onclick="dashangToggle1()"></a></li>
 					</ul>
 				</div>
 				<!-- /Social -->
@@ -636,44 +700,44 @@
 				<ul class="list">
 					<li>
 						<!-- <h4 class="title bounceInUp wow" data-wow-duration="1.3s" data-wow-delay="0.2s">Clean Design</h4> -->
-						<p class="description fadeIn wow" style="margin: 0;" data-wow-duration="1.3s" data-wow-delay="0.2s">
+						<p class="description fadeIn wow" style="font-size: 14px;" data-wow-duration="1.3s" data-wow-delay="0.2s">
 							VR全景图像源自于对真实场景的拍摄捕捉，真实感强。
 						</p>
 					</li>
 					<li>
 						<!-- <h4 class="title bounceInUp wow" data-wow-duration="1.3s" data-wow-delay="0.4s">Mobile Friendly</h4> -->
-						<p class="description fadeIn wow" style="margin: 0;" data-wow-duration="1.3s" data-wow-delay="0.4s">
+						<p class="description fadeIn wow" style="font-size: 14px;" data-wow-duration="1.3s" data-wow-delay="0.4s">
 							可观看整个场景空间的所有图像信息，无死角死区，信息量大。
 						</p>
 					</li>
 					<li>
 						<!-- <h4 class="title bounceInUp wow" data-wow-duration="1.3s" data-wow-delay="0.6s">Well Documented</h4> -->
-						<p class="description fadeIn wow" style="margin: 0;" data-wow-duration="1.3s" data-wow-delay="0.6s">
+						<p class="description fadeIn wow" style="font-size: 14px;" data-wow-duration="1.3s" data-wow-delay="0.6s">
 							VR全景播放经过特殊透视处理，立体感、沉浸感强。
 						</p>
 					</li>
 					<li>
-						<p class="description fadeIn wow" style="margin: 0;" data-wow-duration="1.3s" data-wow-delay="0.6s">
+						<p class="description fadeIn wow" style="font-size: 14px;" data-wow-duration="1.3s" data-wow-delay="0.6s">
 							观看VR全景时，观赏者可通过鼠标任意放大缩小，随意拖动。
 						</p>
 					</li>
 					<li>
-						<p class="description fadeIn wow" style="margin: 0;" data-wow-duration="1.3s" data-wow-delay="0.6s">
+						<p class="description fadeIn wow" style="font-size: 14px;" data-wow-duration="1.3s" data-wow-delay="0.6s">
 							线上线下营销过程中提高客户的转化率，最终提高商家效益。
 						</p>
 					</li>
 					<li>
-						<p class="description fadeIn wow" style="margin: 0;" data-wow-duration="1.3s" data-wow-delay="0.6s">
+						<p class="description fadeIn wow" style="font-size: 14px;" data-wow-duration="1.3s" data-wow-delay="0.6s">
 							分享性强，能带来更高的访问量，为商企带来更多潜在订单。
 						</p>
 					</li>
 					<li>
-						<p class="description fadeIn wow" style="margin: 0;" data-wow-duration="1.3s" data-wow-delay="0.6s">
+						<p class="description fadeIn wow" style="font-size: 14px;" data-wow-duration="1.3s" data-wow-delay="0.6s">
 							互联网加时代创新营销和宣传工具，让客户一目了然，提高企业形象和客户信任度。
 						</p>
 					</li>
 					<li>
-						<p class="description fadeIn wow" style="margin: 0;" data-wow-duration="1.3s" data-wow-delay="0.6s">
+						<p class="description fadeIn wow" style="font-size: 14px;" data-wow-duration="1.3s" data-wow-delay="0.6s">
 							全景制作周期短，成本低于其他3D技术。
 						</p>
 					</li>
@@ -683,7 +747,7 @@
 
 			<!-- Section Image -->
 			<div class="col-md-6 hidden-sm hidden-xs bounceInRight wow" data-wow-duration="1.3s">
-				<img src="images/devices.jpg" class="img-responsive" alt="">
+				<img src="images/wurenji.jpg" class="img-responsive" alt="">
 			</div>
 			<!-- /Section Image -->
 
@@ -866,12 +930,9 @@
 
 			<!-- Footer Social -->
 			<ul class="social-inline">
-				<li><a href="#" class="fa fa-fw fa-facebook"></a></li>
-				<li><a href="#" class="fa fa-fw fa-twitter"></a></li>
-				<li><a href="#" class="fa fa-fw fa-google-plus"></a></li>
-				<li><a href="#" class="fa fa-fw fa-dribbble"></a></li>
-				<li><a href="#" class="fa fa-fw fa-pinterest"></a></li>
-			</ul>
+          <li><a href="#" class="fa fa-fw fa-wechat mobilenosee" onclick="dashangToggle()"></a></li>
+          <li><a href="#" class="fa fa-fw fa-qq mobilenosee" onclick="dashangToggle1()"></a></li>
+      </ul>
 			<!-- /Footer Social -->
 
 		</div>
@@ -920,17 +981,14 @@
 		<!-- Footer Column -->
 		<div class="col-md-2 col-xs-6 footer-col">
 
-			<h3 class="title">Site Menu</h3>
+			<h3 class="title">快速导航</h3>
 
 			<!-- Footer Menu -->
 			<ul class="menu">
-				<li><a href="#">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Features</a></li>
-				<li><a href="#">Projects</a></li>
-				<li><a href="#">Blog</a></li>
-				<li><a href="#">Contact</a></li>
-			</ul>
+          <li><a href="index.html">主页</a></li>
+          <li><a href="about.html">关于我们</a></li>
+          <li><a href="contact.html">联系我们</a></li>
+      </ul>
 			<!-- /Footer Menu -->
 
 		</div>
@@ -959,14 +1017,12 @@
 
 			<!-- Footer Tags -->
 			<div class="tags">
-				<a href="#" class="tag">web</a>
-				<a href="#" class="tag">design</a>
-				<a href="#" class="tag">clean</a>
-				<a href="#" class="tag">minimal</a>
-				<a href="#" class="tag">pixel perfect</a>
-				<a href="#" class="tag">blog</a>
-				<a href="#" class="tag">gallery</a>
-			</div>
+          <a href="#" class="tag">精致</a>
+          <a href="#" class="tag">卓越</a>
+          <a href="#" class="tag">前景广阔</a>
+          <a href="#" class="tag">有效</a>
+          <a href="#" class="tag">完美展现</a>
+      </div>
 			<!-- /Footer Tags -->
 
 		</div>
@@ -1098,8 +1154,19 @@
 			popWin.showWin($(window).width()-50,$(window).height()-50,"通用的iframe弹层插件","http://720yun.com/t/34f239f6a1w?pano_id=1366237");
 		});
 	});
+	
+	function dashangToggle(){
+		$(".hide_box").fadeToggle();
+		$(".shang_box").fadeToggle();
+	}
+
+	function dashangToggle1(){
+		$(".hide_box").fadeToggle();
+		$(".shang_box1").fadeToggle();
+	}
+	
 </script>
 </body>
 </html>
-
+<!-- https://fontawesome.com/icons?d=gallery -->
 
