@@ -16,6 +16,7 @@
     <!-- Style -->
     <link rel="stylesheet" href="css/theme.css">
 
+    <script type="text/javascript" src="js/popwin.js"></script>
 </head>
 <body>
 
@@ -177,8 +178,8 @@
 
                 <div class="projects-list">
 
-                    <div class="col-sm-4 col-xs-12 project-image">
-                        <a href="images/project-01.jpg" class="image-popup">
+                    <div class="col-sm-4 col-xs-12 project-image" id="testbttn">
+                        <a class="pointer">
                             <div class="gallery-image">
                                 <img src="images/project-01.jpg">
                             </div>
@@ -464,5 +465,12 @@
 <link rel="stylesheet" type="text/css" href="demo/styleswitcher.css">
 <script src="demo/styleswitcher.js"></script>
 <!-- /Styleswitcher -->
+<script>
+    $(document).ready(function() {
+    $("#testbttn").on('click' , function(){
+            popWin.showWin($(window).width()-50,$(window).height()-50,"通用的iframe弹层插件","http://720yun.com/t/34f239f6a1w?pano_id=1366237");
+        });
+    });
+</script>
 </body>
 </html>
