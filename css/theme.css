@@ -113,6 +113,10 @@ body {
   font-family: 'Raleway', sans-serif;
   background: #fff;
 }
+.mfp-iframe-holder .mfp-content {
+    width: calc(100vw - 100px) !important;
+    height: calc(100vh - 62px) !important;
+}
 .pointer {
   cursor: pointer;
 }
