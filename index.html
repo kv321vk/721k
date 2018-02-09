@@ -3,14 +3,14 @@
 <head>
 
 <!-- Page title -->
-<title>Home</title>
+<title>全景地球</title>
 
 <!-- Meta -->
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Favicon -->
-<link rel="shortcut icon" href="img/favicon.png">
+<!-- <link rel="shortcut icon" href="img/favicon.png"> -->
 
 <!-- Style -->
 <link rel="stylesheet" href="css/theme.css">
@@ -31,90 +31,9 @@
 <link rel="stylesheet" href="https://cdn.pannellum.org/2.3/pannellum.css"/>
 <script type="text/javascript" src="https://cdn.pannellum.org/2.3/pannellum.js"></script>
 <script type="text/javascript" src="js/popwin.js"></script>
-<style>
-	@media screen and (min-height: 400px) {
-	  #panorama {
-	    width: 100%;
-	    height: 450px;
-		}
-	}
-	@media screen and (max-width: 500px) {
-		.mobilenosee {
-			display: none !important;
-		}
-	}
-	@media screen and (min-width: 500px) {
-		.mobileCansee {
-			display: none !important;
-		}
-	}
-	@media screen and (max-height: 400px) {
-	  #panorama {
-	    width: 100%;
-	    height: 300px;
-		}
-	}
-	.hide_box{z-index:999;filter:alpha(opacity=50);background:#666;opacity: 0.5;-moz-opacity: 0.5;left:0;top:0;height:100%;width:100%;position:fixed;display:none;}
-	.shang_box{width:540px;height:490px;padding:10px;background-color:#fff;border-radius:10px;position:fixed;z-index:1000;left:50%;top:50%;margin-left:-280px;margin-top:-280px;border:1px dotted #dedede;display:none;}
-	.shang_box img{border:none;border-width:0;}
-	.shang_close{float:right;display:inline-block;}
-	.shang_logo{display:block;text-align:center;margin:20px auto;}
-	.shang_payimg {
-    display: block;
-    text-align: center;
-    width: 150px;
-    height: 150px;
-    margin-top: 66px;
-    margin-bottom: 72px;
-    margin-left: 183px;
-	}
-	.pay_explain{text-align:center;margin:10px auto;font-size:14px;color:#545454;}
-	.shang_info{clear:both;}
-	.shang_info p,.shang_info a{color:#aaa;text-align:center;font-size:12px;text-decoration:none;line-height:2em;}
-	.shang_tit {
-    text-align: center;
-    margin-top: 36px;
-    margin-left: 25px;
-    font-size: 18px;
-	}
-	.shang_box1{width:540px;height:490px;padding:10px;background-color:#fff;border-radius:10px;position:fixed;z-index:1000;left:50%;top:50%;margin-left:-280px;margin-top:-280px;border:1px dotted #dedede;display:none;}
-	.shang_box1 img{border:none;border-width:0;}
-</style>
 
 </head>
 <body>
-
-<!-- 二维码弹窗 wechat-->
-<div class="hide_box"></div>
-<div class="shang_box">
-    <p class="shang_close fa fa-fw fa-close" style="font-size: 20px;color: #aaa; cursor: pointer;" href="" onclick="dashangToggle()"></p>
-    <div class="shang_tit">
-        <p>感谢您的信任，我们会尽快与您沟通</p>
-    </div>
-    <img class="shang_payimg" src="images/wechaterweima.jpg" alt="扫码支持" title="扫一扫" />
-    <div class="pay_explain">请扫码添加我们客服的微信</div>
-    <div class="shang_info">
-        <p>请您打开微信扫一扫添加</p>
-    </div>
-</div>
-<!-- 二维码弹窗 -->
-
-<!-- 二维码弹窗 qq-->
-<div class="hide_box"></div>
-<div class="shang_box1">
-    <p class="shang_close fa fa-fw fa-close" style="font-size: 20px;color: #aaa; cursor: pointer;" href="" onclick="dashangToggle1()"></p>
-    <div class="shang_tit">
-        <p>感谢您的信任，我们会尽快与您沟通</p>
-    </div>
-    <img class="shang_payimg" src="images/wechaterweima.jpg" alt="扫码支持" title="扫一扫" />
-    <div class="pay_explain">请扫码添加我们客服的QQ</div>
-    <div class="shang_info">
-        <p>请您打开手机版QQ扫一扫添加</p>
-    </div>
-</div>
-
-<!-- 二维码弹窗 -->
-
 
 <!-- Preloader -->
 <div id="preloader">
@@ -122,121 +41,97 @@
 </div>
 <!-- /Preloader -->
 
+<div id="erweima"></div>
+
 <!-- Header -->
 <header id="home" class="header">
-
 <!-- Navigation -->
 <nav id="navigation" class="navbar affix">
 
-	<!-- Company Information -->
-	<div class="information hidden-sm hidden-xs">
-		<div class="container">
-			<div class="row">
+  <!-- Company Information -->
+  <div class="information hidden-sm hidden-xs">
+    <div class="container">
+      <div class="row">
 
-				<!-- Feedback -->
-				<div class="col-md-7">
-					<a href="http://720yun.com/t/34f239f6a1w?pano_id=1366237" class="iframe-popup"><span class="icon icon_pin_alt"></span> 上海市浦东新区张江研创园</a>
-					<a href="#"><span class="icon icon_mail_alt"></span> 2726003667@qq.com</a>
-					<a href="#"><span class="icon icon_phone"></span> 17521000730</a>
-				</div>
-				<!-- /Feedback -->
+        <!-- Feedback -->
+        <div class="col-md-7">
+          <a href="http://720yun.com/t/34f239f6a1w?pano_id=1366237" class="iframe-popup"><span class="icon icon_pin_alt"></span> 上海市浦东新区张江研创园</a>
+          <a href="#"><span class="icon icon_mail_alt"></span> 2726003667@qq.com</a>
+          <a href="#"><span class="icon icon_phone"></span> 17521000730</a>
+        </div>
+        <!-- /Feedback -->
 
-				<!-- Social -->
-				<div class="col-md-5">
-					<ul class="social">
-						<li><a href="#" class="fa fa-fw fa-wechat" onclick="dashangToggle()"></a></li>
-						<li><a href="#" class="fa fa-fw fa-qq" onclick="dashangToggle1()"></a></li>
-					</ul>
-				</div>
-				<!-- /Social -->
+        <!-- Social -->
+        <div class="col-md-5">
+          <ul class="social">
+            <li><a href="#" class="fa fa-fw fa-wechat" onclick="dashangToggle()"></a></li>
+            <li><a href="#" class="fa fa-fw fa-qq" onclick="dashangToggle1()"></a></li>
+          </ul>
+        </div>
+        <!-- /Social -->
 
-			</div>
-		</div>
-	</div>
-	<!-- /Company Information -->
+      </div>
+    </div>
+  </div>
+  <!-- /Company Information -->
 
-	<div class="container">
+  <div class="container">
 
-		<div class="row">
-			<div class="col-md-12">
+    <div class="row">
+      <div class="col-md-12">
 
-				<!-- Navigation Header -->
-				<div class="navbar-header">
+        <!-- Navigation Header -->
+        <div class="navbar-header">
 
-					<!-- Toggle Button -->
-					<button type="button"
-							class="navbar-toggle collapsed"
-							data-toggle="collapse"
-							data-target="#main-menu"
-							aria-expanded="false"
-							aria-controls="main-menu">
+          <!-- Toggle Button -->
+          <button type="button"
+              class="navbar-toggle collapsed"
+              data-toggle="collapse"
+              data-target="#main-menu"
+              aria-expanded="false"
+              aria-controls="main-menu">
 
-						<span class="sr-only">Toggle Navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
+            <span class="sr-only">Toggle Navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
 
-					</button>
-					<!-- /Toggle Button -->
+          </button>
+          <!-- /Toggle Button -->
 
-					<!-- Brand -->
-					<a href="#" class="brand">
+          <!-- Brand -->
+          <a href="#" class="brand">
 
-						<!-- Logo Big -->
-						<!-- <img src="images/logo.png" class="logo-big" alt=""> -->
-						<!-- /Logo Big -->
-						<h1 style="margin-top: 11px;">全景地球</h1>
-						<!-- Logo Small -->
-						<!-- <img src="images/logo-small.png" class="logo-small" alt=""> -->
-						<!-- /Logo Small -->
+            <!-- Logo Big -->
+            <!-- <img src="images/logo.png" class="logo-big" alt=""> -->
+            <!-- /Logo Big -->
+            <h1 style="margin-top: 11px;">全景地球</h1>
+            <!-- Logo Small -->
+            <!-- <img src="images/logo-small.png" class="logo-small" alt=""> -->
+            <!-- /Logo Small -->
 
-					</a>
-					<!-- /Brand -->
+          </a>
+          <!-- /Brand -->
 
-				</div>
-				<!-- /Navigation Header -->
+        </div>
+        <!-- /Navigation Header -->
 
-				<!-- Navigation -->
-				<div id="main-menu" class="navbar-collapse collapse">
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="index.html">主页</a></li>
-						<li><a href="about.html">关于我们</a></li>
-						<!-- <li class="dropdown">
-							<a href="#" class="dropdown-toggle">Pages</a>
-							<ul class="dropdown-menu">
-								<li><a href="404.html">404</a></li>
-								<li><a href="services.html">Services</a></li>
-							</ul>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle">Blog</a>
-							<ul class="dropdown-menu">
-								<li><a href="blog-left-sidebar.html">Post List - Left Sidebar</a></li>
-								<li><a href="blog.html">Post List - Right Sidebar</a></li>
-								<li><a href="single-post.html">Single Post</a></li>
-							</ul>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle">Portfolio</a>
-							<ul class="dropdown-menu">
-								<li><a href="portfolio-2-col.html">2 Columns</a></li>
-								<li><a href="portfolio-3-col.html">3 Columns</a></li>
-								<li><a href="portfolio.html">4 Columns</a></li>
-								<li><a href="single-project.html">Project Page</a></li>
-							</ul>
-						</li> -->
-						<li><a href="contact.html">联系我们</a></li>
-					</ul>
-				</div>
-				<!-- /Navigation -->
+        <!-- Navigation -->
+        <div id="main-menu" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html">主页</a></li>
+            <li><a href="about.html">关于我们</a></li>
+            <li><a href="contact.html">联系我们</a></li>
+          </ul>
+        </div>
+        <!-- /Navigation -->
 
-			</div>
-		</div>
+      </div>
+    </div>
 
-	</div>
+  </div>
 </nav>
 <!-- /Navigation -->
-
 </header>
 <!-- /Header -->
 
@@ -254,66 +149,7 @@
 <!-- Slider -->
 <div class="slider owl-carousel owl-theme">
 
-<!-- Slide -->
-<!-- <div class="item mask" style="background: url(images/home.jpg) no-repeat center top / cover;" data-stellar-background-ratio="0.4">
-
-	<div class="container height-100p">
-		<div class="row height-100p">
-
-			<div class="col-sm-6 col-md-6 height-100p bounceInLeft wow" data-wow-duration="1.3s" data-wow-delay="0.3s" data-stellar-ratio="0.7">
-				<div class="vertical-middle">
-					<h1 class="text-white">Welcome to <span class="text-theme">CleaThin</span></h1>
-					<div class="text-white h4">
-						It is a long established fact that a reader will be distracted by the readable content of a
-						page when looking at its layout.
-					</div>
-					<a href="#about" class="smooth-scroll btn btn-theme">Start Watching</a>
-				</div>
-			</div>
-
-			<div class="col-sm-6 col-md-4 col-md-offset-2 height-100p bounceInRight wow" data-wow-duration="1.3s" data-stellar-ratio="0.8">
-				<div class="vertical-middle">
-					<img src="images/devices.png" class="img-responsive" alt="">
-				</div>
-			</div>
-
-		</div>
-	</div>
-
-</div> -->
-<!-- /Slide -->
-
-<!-- Slide -->
-<!-- <div class="item mask" style="background: url(images/home-02.jpg) no-repeat center top / cover;" data-stellar-background-ratio="0.4">
-
-	<div class="container height-100p">
-		<div class="row height-100p">
-
-			<div class="col-sm-6 col-md-6 height-100p bounceInLeft wow" data-wow-duration="1.3s" data-wow-delay="0.3s" data-stellar-ratio="0.7">
-				<div class="vertical-middle">
-					<h1 class="text-white">Welcome to <span class="text-theme">CleaThin</span></h1>
-					<div class="text-white h4">
-						It is a long established fact that a reader will be distracted by the readable content of a
-						page when looking at its layout.
-					</div>
-					<a href="#about" class="smooth-scroll btn btn-theme">Start Watching</a>
-				</div>
-			</div>
-			
-			<div class="col-sm-6 col-md-4 col-md-offset-2 height-100p bounceInRight wow" data-wow-duration="1.3s" data-stellar-ratio="0.8">
-				<div class="vertical-middle">
-					<img src="images/devices.png" class="img-responsive" alt="">
-				</div>
-			</div>
-
-		</div>
-	</div>
-
-</div> -->
-<!-- /Slide -->
-
 </div>
-<!-- /Slider -->
 
 <!-- Main -->
 <main class="main-container">
@@ -400,13 +236,13 @@
 		<!-- Section Content -->
 		<div class="row mt">
 
-			<div class="col-md-4 col-sm-6 fadeIn wow" data-wow-duration="1.3s">
-				<a href="portfolio-3-col.html" class="project-item pointer">
+			<div class="col-md-3 col-sm-6 fadeIn wow" data-wow-duration="1.3s">
+				<a href="jingqu.html" class="project-item pointer">
 					<div class="gallery-image">
 						<img src="images/project-01.jpg" alt="">
 					</div>
 					<div class="info">
-						<div class="h4 title">Buildings</div>
+						<div class="h4 title">景区</div>
 						<p class="description"># web-design</p>
 						<div class="social">
 							<i class="fa fa-fw fa-heart-o"></i> 12
@@ -415,8 +251,8 @@
 					</div>
 				</a>
 			</div>
-
-			<div class="col-md-4 col-sm-6 fadeIn wow" data-wow-duration="1.3s" data-wow-delay="0.2s">
+			
+			<div class="col-md-3 col-sm-6 fadeIn wow" data-wow-duration="1.3s" data-wow-delay="0.2s">
 				<a href="portfolio-2-col.html" class="project-item pointer">
 					<div class="gallery-image">
 						<img src="images/project-02.jpg" alt="">
@@ -431,8 +267,8 @@
 					</div>
 				</a>
 			</div>
-
-			<div class="col-md-4 col-sm-6 fadeIn wow" data-wow-duration="1.3s" data-wow-delay="0.4s">
+			
+			<div class="col-md-3 col-sm-6 fadeIn wow" data-wow-duration="1.3s" data-wow-delay="0.4s">
 				<a href="images/project-03.jpg" class="project-item image-popup">
 					<div class="gallery-image">
 						<img src="images/project-03.jpg" alt="">
@@ -448,7 +284,7 @@
 				</a>
 			</div>
 
-			<div class="col-md-4 col-sm-6 fadeIn wow" data-wow-duration="1.3s" data-wow-delay="0.6s">
+			<div class="col-md-3 col-sm-6 fadeIn wow" data-wow-duration="1.3s" data-wow-delay="0.6s">
 				<a href="images/project-04.jpg" class="project-item image-popup">
 					<div class="gallery-image">
 						<img src="images/project-04.jpg" alt="">
@@ -464,13 +300,13 @@
 				</a>
 			</div>
 
-<!-- 			<div class="col-md-4 col-sm-6 fadeIn wow" data-wow-duration="1.3s" data-wow-delay="0.8s">
+			<div class="col-md-3 col-sm-6 fadeIn wow" data-wow-duration="1.3s" data-wow-delay="0.8s">
 				<a href="images/project-05.jpg" class="project-item image-popup">
 					<div class="gallery-image">
 						<img src="images/project-05.jpg" alt="">
 					</div>
 					<div class="info">
-						<div class="h4 title">The Writer's Collection</div>
+						<div class="h4 title">The Writer's Coll</div>
 						<p class="description"># creative</p>
 						<div class="social">
 							<i class="fa fa-fw fa-heart-o"></i> 29
@@ -480,7 +316,7 @@
 				</a>
 			</div>
 
-			<div class="col-md-4 col-sm-6 fadeIn wow" data-wow-duration="1.3s" data-wow-delay="1.0s">
+			<div class="col-md-3 col-sm-6 fadeIn wow" data-wow-duration="1.3s" data-wow-delay="1.0s">
 				<a href="images/project-06.jpg" class="project-item image-popup">
 					<div class="gallery-image">
 						<img src="images/project-06.jpg" alt="">
@@ -494,7 +330,103 @@
 						</div>
 					</div>
 				</a>
-			</div> -->
+			</div>
+
+			<div class="col-md-3 col-sm-6 fadeIn wow" data-wow-duration="1.3s" data-wow-delay="1.2s">
+				<a href="images/project-06.jpg" class="project-item image-popup">
+					<div class="gallery-image">
+						<img src="images/project-06.jpg" alt="">
+					</div>
+					<div class="info">
+						<div class="h4 title">Overhead</div>
+						<p class="description"># illustration</p>
+						<div class="social">
+							<i class="fa fa-fw fa-heart-o"></i> 17
+							<i class="fa fa-fw fa-share-square-o"></i> 3
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="col-md-3 col-sm-6 fadeIn wow" data-wow-duration="1.3s" data-wow-delay="1.3s">
+				<a href="images/project-06.jpg" class="project-item image-popup">
+					<div class="gallery-image">
+						<img src="images/project-06.jpg" alt="">
+					</div>
+					<div class="info">
+						<div class="h4 title">Overhead</div>
+						<p class="description"># illustration</p>
+						<div class="social">
+							<i class="fa fa-fw fa-heart-o"></i> 17
+							<i class="fa fa-fw fa-share-square-o"></i> 3
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="col-md-3 col-sm-6 fadeIn wow" data-wow-duration="1.3s" data-wow-delay="1.4s">
+				<a href="images/project-06.jpg" class="project-item image-popup">
+					<div class="gallery-image">
+						<img src="images/project-06.jpg" alt="">
+					</div>
+					<div class="info">
+						<div class="h4 title">Overhead</div>
+						<p class="description"># illustration</p>
+						<div class="social">
+							<i class="fa fa-fw fa-heart-o"></i> 17
+							<i class="fa fa-fw fa-share-square-o"></i> 3
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="col-md-3 col-sm-6 fadeIn wow" data-wow-duration="1.3s" data-wow-delay="1.5s">
+				<a href="images/project-06.jpg" class="project-item image-popup">
+					<div class="gallery-image">
+						<img src="images/project-06.jpg" alt="">
+					</div>
+					<div class="info">
+						<div class="h4 title">Overhead</div>
+						<p class="description"># illustration</p>
+						<div class="social">
+							<i class="fa fa-fw fa-heart-o"></i> 17
+							<i class="fa fa-fw fa-share-square-o"></i> 3
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="col-md-3 col-sm-6 fadeIn wow" data-wow-duration="1.3s" data-wow-delay="1.6s">
+				<a href="images/project-06.jpg" class="project-item image-popup">
+					<div class="gallery-image">
+						<img src="images/project-06.jpg" alt="">
+					</div>
+					<div class="info">
+						<div class="h4 title">Overhead</div>
+						<p class="description"># illustration</p>
+						<div class="social">
+							<i class="fa fa-fw fa-heart-o"></i> 17
+							<i class="fa fa-fw fa-share-square-o"></i> 3
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="col-md-3 col-sm-6 fadeIn wow" data-wow-duration="1.3s" data-wow-delay="1.7s">
+				<a href="images/project-06.jpg" class="project-item image-popup">
+					<div class="gallery-image">
+						<img src="images/project-06.jpg" alt="">
+					</div>
+					<div class="info">
+						<div class="h4 title">Overhead</div>
+						<p class="description"># illustration</p>
+						<div class="social">
+							<i class="fa fa-fw fa-heart-o"></i> 17
+							<i class="fa fa-fw fa-share-square-o"></i> 3
+						</div>
+					</div>
+				</a>
+			</div>
 
 		</div>
 		<!-- /Section content -->
@@ -618,7 +550,6 @@
 							It is a long established fact that a reader will be distracted by the readable content
 							of a page when looking at its layout.
 						</p>
-					</div>
 				</div>
 			</div>
 			<!-- /Feature Block -->
@@ -733,7 +664,7 @@
 					</li>
 					<li>
 						<p class="description fadeIn wow" style="font-size: 14px;" data-wow-duration="1.3s" data-wow-delay="0.6s">
-							互联网加时代创新营销和宣传工具，让客户一目了然，提高企业形象和客户信任度。
+							互联网+创新营销和宣传工具，让客户一目了然，提高企业形象和客户信任度。
 						</p>
 					</li>
 					<li>
@@ -901,136 +832,7 @@
 <!-- /Main -->
 
 <!-- Footer -->
-<footer class="footer section-small">
-<div class="container">
-	<div class="row">
-
-		<!-- Footer Column -->
-		<div class="col-md-3 col-xs-6 footer-col">
-
-			<!-- Footer Logo -->
-			<div class="logo">
-				<img src="images/logo.png" alt="">
-			</div>
-			<!-- /Footer Logo -->
-
-			<!-- Footer Text -->
-			<p class="text">
-				It is a long established fact that a reader will be distracted by the readable.
-			</p>
-			<!-- /Footer Text -->
-
-			<hr>
-
-			<!-- Copyright -->
-			<p class="copyright">
-				Copyright &copy; 沪ICP备18001834号-1
-			</p>
-			<!-- /Copyright -->
-
-			<!-- Footer Social -->
-			<ul class="social-inline">
-          <li><a href="#" class="fa fa-fw fa-wechat mobilenosee" onclick="dashangToggle()"></a></li>
-          <li><a href="#" class="fa fa-fw fa-qq mobilenosee" onclick="dashangToggle1()"></a></li>
-      </ul>
-			<!-- /Footer Social -->
-
-		</div>
-		<!-- /Footer Column -->
-
-		<!-- Footer Column -->
-		<div class="col-md-3 col-xs-6 footer-col">
-
-			<h3 class="title">Latest From <span class="text-theme">Blog</span></h3>
-
-			<!-- Footer Post -->
-			<div class="media post">
-				<div class="media-left">
-					<div class="image">
-						<img src="images/last-post-01.jpg" alt="">
-					</div>
-				</div>
-				<div class="media-body">
-					<p class="text">
-						It is a long established fact that a reader will be distracted.
-					</p>
-					<a href="#">Read more</a>
-				</div>
-			</div>
-			<!-- /Footer Post -->
-
-			<!-- Footer Post -->
-			<div class="media post">
-				<div class="media-left">
-					<div class="image">
-						<img src="images/last-post-02.jpg" alt="">
-					</div>
-				</div>
-				<div class="media-body">
-					<p class="text">
-						It is a long established fact that a reader will be distracted.
-					</p>
-					<a href="#">Read more</a>
-				</div>
-			</div>
-			<!-- /Footer Post -->
-
-		</div>
-		<!-- /Footer Column -->
-
-		<!-- Footer Column -->
-		<div class="col-md-2 col-xs-6 footer-col">
-
-			<h3 class="title">快速导航</h3>
-
-			<!-- Footer Menu -->
-			<ul class="menu">
-          <li><a href="index.html">主页</a></li>
-          <li><a href="about.html">关于我们</a></li>
-          <li><a href="contact.html">联系我们</a></li>
-      </ul>
-			<!-- /Footer Menu -->
-
-		</div>
-		<!-- /Footer Column -->
-
-		<!-- Footer Column -->
-		<div class="col-md-4 col-xs-6 footer-col">
-
-			<h3 class="title">Signup to <span class="text-theme">Newsletter</span></h3>
-
-			<!-- Footer Signup Form -->
-			<div class="signup-form">
-				<form method="post" class="form-inline">
-					<div class="form-group">
-						<input type="email" class="form-control" placeholder="Your E-mail...*" required>
-					</div>
-					<div class="form-group">
-						<button type="submit" class="btn btn-theme"><i class="fa fa-fw fa-envelope"></i></button>
-					</div>
-				</form>
-
-			</div>
-			<!-- /Footer Signup Form -->
-
-			<hr>
-
-			<!-- Footer Tags -->
-			<div class="tags">
-          <a href="#" class="tag">精致</a>
-          <a href="#" class="tag">卓越</a>
-          <a href="#" class="tag">前景广阔</a>
-          <a href="#" class="tag">有效</a>
-          <a href="#" class="tag">完美展现</a>
-      </div>
-			<!-- /Footer Tags -->
-
-		</div>
-		<!-- /Footer Column -->
-
-	</div>
-</div>
-</footer>
+<footer id="footer" class="footer section-small"></footer>
 <!-- /Footer -->
 
 <!-- Scroll To Top -->
@@ -1085,45 +887,11 @@
 <!-- /SCRIPTS -->
 
 
-<!-- TODO: Remove this block, Demo-version only -->
-<!-- Styleswitcher -->
-<div id="styleswitcher" class="styleswitcher">
-<div class="styleswitcher-content">
-
-	<h4 class="styleswitcher-title">Color Presets</h4>
-	<div class="styleswitcher-block">
-		<ul class="styleswitcher-list-colors">
-			<li><a href="javascript: switchStyle('theme-persimmon')" style="background: #ff5555;" title="Persimmon"></a></li>
-			<li><a href="javascript: switchStyle('theme-atomic-tangerine')" style="background: #ff9e55;" title="Atomic Tangerine"></a></li>
-			<li><a href="javascript: switchStyle('theme-yellow-sea')" style="background: #fab000;" title="Yellow Sea"></a></li>
-			<li><a href="javascript: switchStyle('theme-rio-grande')" style="background: #aed605;" title="Rio Grande"></a></li>
-			<li><a href="javascript: switchStyle('theme-vida-loca')" style="background: #38b71f;" title="Vida Loca"></a></li>
-			<li><a href="javascript: switchStyle('theme-mountain-meadow')" style="background: #1fb768;" title="Mountain Meadow"></a></li>
-			<li><a href="javascript: switchStyle('theme-java')" style="background: #1fb7a4;" title="Java"></a></li>
-			<li><a href="javascript: switchStyle('theme-mariner')" style="background: #3274cd;" title="Mariner"></a></li>
-			<li><a href="javascript: switchStyle('theme-medium-purple')" style="background: #996de9;" title="Medium Purple"></a></li>
-			<li><a href="javascript: switchStyle('theme-lavender-magenta')" style="background: #e94de4;" title="Lavender Magenta"></a></li>
-		</ul>
-	</div>
-
-	<h4 class="styleswitcher-title">Navigation Style</h4>
-	<div class="styleswitcher-block">
-		<select id="styleswitcher-navbar-style">
-			<option value="style-1">Default</option>
-			<option value="style-2">Fill</option>
-			<option value="style-3">Underline</option>
-		</select>
-	</div>
-
-</div>
-
-<div class="styleswitcher-button vertical-middle"><i class="fa fa-gear"></i></div>
-</div>
-
-<link rel="stylesheet" type="text/css" href="demo/styleswitcher.css" property="">
-<script src="demo/styleswitcher.js"></script>
-<!-- /Styleswitcher -->
 <script>
+	$(document).ready(function(){
+	   $("#footer").load("footer.html");
+	   $("#erweima").load("erweima.html");
+	});
 	// pannellum.viewer('panorama', {
 	//     "type": "equirectangular",
 	//     // "panorama": "https://pannellum.org/images/alma-correlator-facility.jpg",
@@ -1168,5 +936,3 @@
 </script>
 </body>
 </html>
-<!-- https://fontawesome.com/icons?d=gallery -->
-
