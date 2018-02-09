@@ -162,11 +162,11 @@ body {
   .shang_box1{width:540px;height:490px;padding:10px;background-color:#fff;border-radius:10px;position:fixed;z-index:1000;left:50%;top:50%;margin-left:-280px;margin-top:-280px;border:1px dotted #dedede;display:none;}
   .shang_box1 img{border:none;border-width:0;}
 
-
+/*
 .mfp-iframe-holder .mfp-content {
     width: calc(100vw - 30px) !important;
     height: calc(100vh - 62px) !important;
-}
+}*/
 .pointer {
   cursor: pointer;
 }
