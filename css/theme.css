@@ -163,10 +163,10 @@ body {
   .shang_box1 img{border:none;border-width:0;}
 
 
-.mfp-iframe-holder .mfp-content {
+/*.mfp-iframe-holder .mfp-content {
     width: calc(100vw - 30px) !important;
     height: calc(100vh - 62px) !important;
-}
+}*/
 .pointer {
   cursor: pointer;
 }
